@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Romain Caussé</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+  <div>
+     <p class="name">Romain <img class="face" src="https://s.gravatar.com/avatar/90bb41d17ca880eea509314cf2704ca2?s=120" alt=""> Caussé</p>
+     <p class="bio-mini"><a href="#">Full Stack Developer</a></p>
+     <p class="code">&lt;code&gt;love&lt;/code&gt;</p>
+
+    <p class="parameters">
+      <span class="email"><i class="fas fa-envelope"></i><span>romain(.)causse(a)gmail(.)com</span></span>
+      <span class="phone"><i class="fas fa-phone"></i><span>+33 684999963</span></span>
+      <span class="location"><i class="fas fa-location-arrow"></i><span>France</span></span>
+      <span class="time"><i class="fas fa-clock"></i><span>Central European Timezone</span></span>
+      <span class="facebook"><i class="fab fa-facebook"></i><span>romain.causse</span></span>
+      <span class="twitter"><i class="fab fa-twitter"></i><span>@romain_causse</span></span>
+      <span class="linkedin"><i class="fab fa-linkedin"></i><span>romain-causse</span></span>
+      <span class="github"><i class="fab fa-github"></i><span>romaincausse</span></span>
+      <span class="skype"><i class="fab fa-skype"></i><span>romain.causse.pro</span></span>
+      <span class="youtube"><i class="fab fa-youtube"></i></i><span>https://www.youtube.com/playlist?list=PL1dE51-y3MKpGr33TMZg8Ww97lhElg2yX</span></span>
+    </p>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('.parameters > span').each(function(i) {
+     $(this).html($(this).html().replace(/\(a\)/g, '@').replace(/\(\.\)/g, '.'));
+  });
+
+  $('.parameters > span').click(function() {
+    if ($(this).hasClass('held')) {
+      $('.parameters > span').each(function() {
+        $(this).removeClass('hold').removeClass('held');
+      });
+    } else {
+      $('.parameters > span').each(function() {
+        $(this).addClass('hold').removeClass('held');
+      });
+      $(this).addClass('held').removeClass('hold');
+    }
+  });
+});
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126372137-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126372137-1');
+</script>
+
+
+   
+</body>
+</html>
